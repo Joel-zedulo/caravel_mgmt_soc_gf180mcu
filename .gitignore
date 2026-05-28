@@ -1,1 +1,7 @@
 openlane/*/runs
+*.swp
+*.bak
+*.bak
+__pycache__/
+.changes_done
+commit.sh
