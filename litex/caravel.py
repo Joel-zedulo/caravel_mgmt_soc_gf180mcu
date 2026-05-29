@@ -10,7 +10,7 @@ import argparse
 from os import path
 
 from migen import *
-from litex.soc.cores.spi_flash import S7SPIFlash as SpiFlash
+#from litex.soc.cores.spi_flash import S7SPIFlash as SpiFlash
 from litex.soc.integration.soc_core import SoCCore
 from litex.soc.integration.builder import Builder, builder_argdict, builder_args
 from litex.soc.integration.soc_core import soc_core_argdict, soc_core_args
@@ -26,6 +26,14 @@ import litex.soc.doc as lxsocdoc
 
 from caravel_platform import Platform
 from caravel_ram import *
+
+from litex.gen import LiteXModule
+from litex.soc.interconnect.csr import *
+from litex.soc.cores.spi import SPIMaster
+
+class SpiFlash(LiteXModule):
+    pass
+
 
 # SoCMini.mem_map = {
 #     "dff": 0x00000000,
